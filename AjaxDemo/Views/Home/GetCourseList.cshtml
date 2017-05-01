@@ -1,0 +1,24 @@
+﻿@model List<AjaxDemo.Models.CourseViewModel>
+@{
+    ViewBag.Title = "GetCourseList";
+    Layout = null;
+}
+
+<h2>GetCourseList</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>&nbsp</th>
+    </tr>
+
+    @foreach (var cl in Model)
+    {
+    <tr>
+        <td class="course-id">@cl.Id</td>
+        <td class="course-title">@cl.Title</td>
+        <td><button class="edit-course btn btn-success">Edit</button></td>
+    </tr>
+    }
+</table>
